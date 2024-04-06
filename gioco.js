@@ -710,23 +710,21 @@ function livelloPortaRossa(){
 
             if(keyIsDown(RIGHT_ARROW)){
                 //sposta l'omino a destra
-                if(!inverti_direz && x_omino <= lim_dx){//1270
+                if(!scambia && x_omino <= lim_dx){//1270
                     x_omino += 3;
                 }else{
-                    //sposta l'omino a sinistra con comandi invertiti
-                    if(inverti_direz && x_omino >= lim_sx){
-                        x_omino -= 3;
+                    if(scambia && x_portaRossa <=  lim_dx){
+                        x_portaRossa +=3;
                     }
                 }
             }else{
                 if(keyIsDown(LEFT_ARROW)){
                     //sposta l'omino a sinistra
-                    if(!inverti_direz && x_omino >= lim_sx){//110
+                    if(!scambia && x_omino >= lim_sx){//110
                         x_omino -= 3;
                     }else{
-                        //sposta l'omino adestra con comandi invertiti
-                        if(inverti_direz && x_omino <= lim_dx){
-                            x_omino += 3;
+                        if(scambia && x_portaRossa >=  lim_sx){
+                            x_portaRossa -=3;
                         }
                     }
                 }
